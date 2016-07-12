@@ -17,6 +17,7 @@ import {
 
 import styles from './style';
 import BaseComponent from './BaseComponent';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 let componentIndex = 0;
 
@@ -155,7 +156,10 @@ export default class ModalPicker extends BaseComponent {
         }
         return (
             <View style={[styles.selectStyle, this.props.selectStyle]}>
-                <Text style={[styles.selectTextStyle, this.props.selectTextStyle]}>{this.state.selected}</Text>
+                <Text style={[styles.selectTextStyle, this.props.selectTextStyle]}>
+                  {this.state.selected}
+                </Text>
+                <Icon name="ios-arrow-down" style={styles.selectIconStyle}/>
             </View>
         );
     }
