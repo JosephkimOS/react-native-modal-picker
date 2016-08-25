@@ -34,7 +34,8 @@ const propTypes = {
     cancelStyle: View.propTypes.style,
     cancelTextStyle: Text.propTypes.style,
     overlayStyle: View.propTypes.style,
-    cancelText: PropTypes.string
+    cancelText: PropTypes.string,
+    selectIconStyle: View.propTypes.style,
 };
 
 const defaultProps = {
@@ -159,7 +160,7 @@ export default class ModalPicker extends BaseComponent {
                 <Text style={[styles.selectTextStyle, this.props.selectTextStyle]}>
                   {this.state.selected}
                 </Text>
-                <Icon name="ios-arrow-down" style={styles.selectIconStyle}/>
+                <Icon name="ios-arrow-down" style={[styles.selectIconStyle, this.props.selectIconStyle]}/>
             </View>
         );
     }
